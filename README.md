@@ -1,6 +1,12 @@
 # Pesquisa-Reflexao-Python
 O presente repositório armazena os artefatos como suporte para a apresentação do trabalho **Uso de reflexão para verificação de tipos dinâmicos em objetos Python**, apresentado na Mostra de Ensino Pesquisa, Extensão e Cidadania 2022 (MEPEC 2022) do Instituto Federal Catarinense (IFC) Campus Blumenau.
 
+## Estrutura do repositório
+
+- __imagens:__ Imagens que são referenciadas pelo arquivo .md em questão. São os mesmos recursos que foram utilizadas durante a apresentação no evento;
+
+- __artefatos:__ Modelo proposto e códigos exemplificando os resultados da pesquisa. Conta com exemplos que foram apresentados no evento, bem como outros elementos que não foram exibidos no poster e que ficam como extras para suportar a ideia da pesquisa apresentada.
+
 ## Trabalho apresentado
 
 Em sequência apresenta-se o material que foi utilizado para apresentação da pesquisa. O conteúdo disposto na presente seção refere-se ao conteúdo que foi exibido em poster durante a MEPEC 2022. 
@@ -22,11 +28,17 @@ O trabalho consistiu de uma pesquisa bibliográfica e de uma pesquisa explorató
 
 Foi possível desenvolver um modelo reflexivo genérico. O mecanismo consiste em especificar os tipos dos parâmetros de um método X de uma classe A utilizando annotations, e invocar um outro método Y (genérico) de validação que recebe como parâmetros o método X que será analisado e os valores recebidos via parâmetros em X (Figura 1). A ideia fundamental consiste em acessar reflexivamente as metainformações annotations, verificando se os valores recebidos correspondem com o esperado. Caso não haja correspondência, o programador pode definir uma ação – como disparar um erro – que deve ser executada. Esse modelo pode ser aplicado, por exemplo, no construtor de uma classe para validar se os tipos dos dados usados para instanciar o objeto correspondem ao especificado pelo programador (Figura 2). Dessa forma, apenas objetos com tipos corretos são criados, caso contrário um erro descritivo é gerado, apontando a incoerência entre os tipos especificados e atribuídos (Figura 3).
 
-[Figura 1](/imagens/img1.png)
+![Figura 1](/imagens/img1.png)
 
-[Figura 2](/imagens/img2.png)
+***Figura 1:** Modelo reflexivo genérico. Fonte: Os autores.*
 
-[Figura 3](/imagens/img3.png)
+![Figura 2](/imagens/img2.png)
+
+***Figura 2:** Exemplo de aplicação do modelo genérico no construtor da classe. Fonte: Os autores.*
+
+![Figura 3](/imagens/img3.png)
+
+***Figura 3:** Diferença na instanciação de objetos com tipos válidos x inválidos. Fonte: Os autores.*
 
 ### Conclusão
 
